@@ -20,11 +20,19 @@ European Basket Option Pricing Approaches
     + [4.2. Input Features](#42-input-features)
     + [4.3. Hyperparameters](#43-hyperparameters)
   * [Limitations and Known Bugs](#limitations-and-known-bugs)
-  * [Code Flow and Repository Settings](#code-flow-and-repository-settings)
+  * [Code and Repository](#code-and-repository)
     + [Environment Setup:](#environment-setup-)
     + [Usage:](#usage-)
+    + [Examples](#examples)
+      - [1. Black-Scholes Pricing](#1-black-scholes-pricing)
+      - [2. Neural Network Pricing](#2-neural-network-pricing)
+      - [3. Monte-Carlo Pricing](#3-monte-carlo-pricing)
+  * [EDA](#eda)
+- [Future Direction & Improvements](#future-direction---improvements)
+  * [References](#references)
 
 [comment]: <> (<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>)
+
 
 ## Scope
 This project is designed to fulfil the assessment requirements for the Machine Learning Engineer post at Multiverse 
@@ -193,7 +201,7 @@ This code should work with``` Python >= 3.6```
   * valid json object
   * data.json is given in this repo can be used to give any custom input to any specific mode
 
-### Example:
+### Examples
 #### 1. Black-Scholes Pricing
 
   ```python runner.py -m bs -d data.json ```
@@ -202,7 +210,6 @@ This code should work with``` Python >= 3.6```
 
   ```Black-Scholes price for this European Call option = 11.308008169966485```
 
-```python runner.py -m dl -d data.json```
 
 #### 2. Neural Network Pricing
 
@@ -237,7 +244,7 @@ these outliers.
 from the top whisker of the box plot indicating the density of outliers in the upper and lower bounds of this variable.
 
 
-#Future Direction:
+# Future Direction & Improvements
 1. Exploratory Data Analysis of the data in hand to normalize the data for better and cleaner training.
 2. Better intuition of Volatility for Black-Scholes fixed ```v``` calculation to mitigate the error in current implementation.
 3. **There was a fake news release from Bloomberg on 17-07-2015 about the acquisition of Twitter for 31B USD. This happened 
