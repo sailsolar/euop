@@ -246,15 +246,32 @@ from the top whisker of the box plot indicating the density of outliers in the u
 
 # Future Direction & Improvements
 1. Exploratory Data Analysis of the data in hand to normalize the data for better and cleaner training.
-2. Better intuition of Volatility for Black-Scholes fixed ```v``` calculation to mitigate the error in current implementation.
-3. **There was a fake news release from Bloomberg on 17-07-2015 about the acquisition of Twitter for 31B USD. This happened 
+2. **Get the input data vetted by a domain expert to mitigate the inaccuracies.**
+3. Introduce Heston Volatility and then retrain the network releasing the assumption of fixed volatility.
+4. Employ GridSearch to look for best hyper-parameter given that the input data is sound and correct.
+5. Use LSTM network to capture the information for date of trading to learn the underlying pattern.
+6. Better intuition of Volatility for Black-Scholes fixed ```v``` calculation to mitigate the error in current implementation.
+7. **There was a fake news release from Bloomberg on 17-07-2015 about the acquisition of Twitter for 31B USD. This happened 
    around 11:35 am on that day. If I can get that data, I can calculate volatility as the weighted average of the X 
    timestamp and thus can have an organic volatility for training. This will enable me to release the assumption of constant 
    volatility from the Black-Scholes and the resulting NN implementation can have a very interesting result.**
-4. Explore the numerical methods in more detail inorder to better implement the current version.
-5. Dataset for BitCoin and Tesla stock comparison can be scoured to study the impact of Tesla accepting and then dropping the 
+8. Explore the numerical methods in more detail inorder to better implement the current version.
+9. Dataset for BitCoin and Tesla stock comparison can be scoured to study the impact of Tesla accepting and then dropping the 
    BitCoin as their payment option thus disrupting the crypto market quite heavily a while ago.
-6. Expand on my understanding of the quantitative finance domain to better study the market trends and nomenclature.
-7. Keep the Learn, Try, Repeat cycle going in full swing.
+10. Expand on my understanding of the quantitative finance domain to better study the market trends and nomenclature.
+11. Keep the Learn, Try, Repeat cycle going in full swing.
 
-
+### References
+1. https://www.nasdaq.com/market-activity/stocks/twtr/option-chain
+2. https://cs230.stanford.edu/projects_fall_2019/reports/26260984.pdf
+3. https://www.researchgate.net/publication/220204936_A_neural_network_model_for_estimating_option_prices
+4. https://www.weareworldquant.com/en/thought-leadership/beyond-black-scholes-a-new-option-for-options-pricing/
+5. https://www.kaggle.com/bendgame/options-market-trades
+6. https://www.khanacademy.org/economics-finance-domain/core-finance/derivative-securities/black-scholes/v/implied-volatility
+7. https://stienstraw-9633.shinyapps.io/ML-Presentation/#9
+8. https://towardsdatascience.com/monte-carlo-pricing-in-python-eafc29e3b6c9
+9. https://github.com/RomanMichaelPaolucci
+10. https://corporatefinanceinstitute.com/resources/knowledge/trading-investing/exotic-options/
+11. https://www.investopedia.com/ask/answers/032515/what-options-implied-volatility-and-how-it-calculated.asp
+12. https://www.investopedia.com/terms/v/volatility.asp
+13. https://www.investopedia.com/terms/h/heston-model.asp
