@@ -124,6 +124,7 @@ Using this formula, the volatility was fixed at ```0.031802533217352```
 6. Target variable ```Y``` for the Neural Network was set to be the Black-Scholes price of each training example. This
 was decided due to lack of actual trade value of the option in the primary dataset.
 
+# GOAL 1
 ## 4. ANN Model
 ANNs are composed of multiple nodes, which imitate biological neurons of human brain. The neurons are connected by links
 and they interact with each other. The nodes can take input data and perform simple operations on the data. The result 
@@ -149,6 +150,10 @@ Following were set at the input features to this ANN model.
   * Volatility
   * Risk Free Interest Rate
   * Time left in expiration
+
+ 
+Training set is given at the following location in the repo.
+```<root>/training/baseline.csv```
 
 ### 4.3. Hyperparameters
 
@@ -243,25 +248,39 @@ these outliers.
 * As we can see from the above plot that the max value of 100+ observation of time left in expiration are aways from the
 from the top whisker of the box plot indicating the density of outliers in the upper and lower bounds of this variable.
 
+# Goal 2
+## Comparison between Neural Network and Monte Carlo Numerical Method
 
-# Future Direction & Improvements
+According to the trained model, the values of Monte Carlo and NN are not making too much sense to be reflecting any 
+meaningful pricing. This indicates a problem with either the dataset or the volatility calculation used to set the constant.
+
+
+# Goal 3
+##Comparison of Analytical Method (Black-Scholes Pricing) vs Neural Network bs Monte Carlo Numerical Method
+While looking at the results, the Black-Scholes pricing seems to be the most reasonable and correct against the NN, and
+Monte-Carlo method. Part of this behavior is due to the fact that Black-Scholes pricing is used as the target variable 
+in the training of the Neural network giving it an edge of being the ground truth. Dataset, however, needs to be discussed with a domain expert.
+
+
+## Future Direction & Improvements
 1. Exploratory Data Analysis of the data in hand to normalize the data for better and cleaner training.
-2. **Get the input data vetted by a domain expert to mitigate the inaccuracies.**
-3. Introduce Heston Volatility and then retrain the network releasing the assumption of fixed volatility.
-4. Employ GridSearch to look for best hyper-parameter given that the input data is sound and correct.
-5. Use LSTM network to capture the information for date of trading to learn the underlying pattern.
-6. Better intuition of Volatility for Black-Scholes fixed ```v``` calculation to mitigate the error in current implementation.
-7. **There was a fake news release from Bloomberg on 17-07-2015 about the acquisition of Twitter for 31B USD. This happened 
+2. Tabular comparison of the results from analytical, neural network and Monte Carlo approaches 
+3. **Get the input data vetted by a domain expert to mitigate the inaccuracies.**
+4. Introduce Heston Volatility and then retrain the network releasing the assumption of fixed volatility.
+5. Employ GridSearch to look for best hyper-parameter given that the input data is sound and correct.
+6. Use LSTM network to capture the information for date of trading to learn the underlying pattern.
+7. Better intuition of Volatility for Black-Scholes fixed ```v``` calculation to mitigate the error in current implementation.
+8. **There was a fake news release from Bloomberg on 17-07-2015 about the acquisition of Twitter for 31B USD. This happened 
    around 11:35 am on that day. If I can get that data, I can calculate volatility as the weighted average of the X 
    timestamp and thus can have an organic volatility for training. This will enable me to release the assumption of constant 
    volatility from the Black-Scholes and the resulting NN implementation can have a very interesting result.**
-8. Explore the numerical methods in more detail inorder to better implement the current version.
-9. Dataset for BitCoin and Tesla stock comparison can be scoured to study the impact of Tesla accepting and then dropping the 
-   BitCoin as their payment option thus disrupting the crypto market quite heavily a while ago.
-10. Expand on my understanding of the quantitative finance domain to better study the market trends and nomenclature.
-11. Keep the Learn, Try, Repeat cycle going in full swing.
+9. Explore the numerical methods in more detail inorder to better implement the current version.
+10. Dataset for BitCoin and Tesla stock comparison can be scoured to study the impact of Tesla accepting and then dropping the 
+    BitCoin as their payment option thus disrupting the crypto market quite heavily a while ago.
+11. Expand on my understanding of the quantitative finance domain to better study the market trends and nomenclature.
+12. Keep the Learn, Try, Repeat cycle going in full swing.
 
-### References
+## References
 1. https://www.nasdaq.com/market-activity/stocks/twtr/option-chain
 2. https://cs230.stanford.edu/projects_fall_2019/reports/26260984.pdf
 3. https://www.researchgate.net/publication/220204936_A_neural_network_model_for_estimating_option_prices

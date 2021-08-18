@@ -131,7 +131,7 @@ dmypy.json
 # PyCharm
 .idea/
 
-# Custom File Extensions
-*.csv
+# Custom Files
+raw.csv
 *.ipynb
 scratch.py
