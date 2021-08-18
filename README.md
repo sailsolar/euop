@@ -1,7 +1,7 @@
 # EUBOPA
 European Basket Option Pricing Approaches
 
-##Table of Contents
+## Table of Contents
 
 - [EUBOPA](#eubopa)
   * [Scope](#scope)
