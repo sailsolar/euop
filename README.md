@@ -244,6 +244,11 @@ Output:
 Due to limited time, an extensive Exploratory Data Analysis couldn't be completed for the acquired data. However, following 
 observation were made.
 
+The overall distribution of the training data for SPY stock option is given below.
+
+![Dataframe_stats](assets/df.png)
+
+
 ![Strike Box Plot](assets/box.png)
 
 * As we can see from the above plot that there are approx 21 observations where of strike price is quite away from the 
