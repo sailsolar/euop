@@ -11,10 +11,8 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.callbacks import EarlyStopping
 from tensorflow.keras.optimizers import SGD
 
-import utils
-
 # Reading Data
-df = pd.read_csv('../baseline.csv')
+df = pd.read_csv('baseline.csv')
 df.dropna(inplace=True)
 data = df.values
 

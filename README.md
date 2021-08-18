@@ -71,14 +71,38 @@ the call options for the SPY dataset.
 
 ## 3. Assumptions attached to this project
 
-1. The first assumption undertaken is that the data of SPY company is representing a weighted average of multiple assets
-making it a basket option.
-2. The option will only be exercised on the expiration date hence making it classic European option.
-3. Volatility of this option is calculated by the following formula.
+1. The first assumption undertaken is that the data of SPY company is representing a weighted average of multiple 
+underlying assets making it a basket option.
+2. The option will only be exercised on the expiration date hence it is a European option.
+3. **Volatility**, ```v```, is calculated by the following formula.
 
 ![volatility](assets/volatility.png)
 
-5. 
+where;
 
-#### Basic Structure of ANNs
-ANNs are composed of multiple nodes, which imitate biological neurons of human brain. The neurons are connected by links and they interact with each other. The nodes can take input data and perform simple operations on the data. The result of these operations is passed to other neurons. The output at each node is called its activation or node value.Each link is associated with weight.
+* sigma is the standard deviation 
+* ```N``` = total no. of unique days in which the trading of asset of interest happened 
+
+Using this formula, the volatility was fixed at ```0.031802533217352```
+
+4. Adherence to the assumption no. 3 makes the whole project to be operating in the Black-Scholes world. 
+5. Risk-Free Interest Rate is set as the 10-year US treasury yield from Yahoo Finance API. At the time of data processing 
+   for this project, the risk-free interest rate was ```0.012580000162125```
+
+
+## 4. ANN Model
+ANNs are composed of multiple nodes, which imitate biological neurons of human brain. The neurons are connected by links
+and they interact with each other. The nodes can take input data and perform simple operations on the data. The result 
+of these operations is passed to other neurons. The output at each node is called its activation or node value.Each 
+link is associated with weight.
+
+For this project, a simple ANN architecture was designed using Keras API with TensorFlow backend. Model summary is given
+as follows.
+
+![model summary](assets/model_summary.png)
+                                                                
+
+## ANN Architecture
+
+![architecture](assets/nn.svg)  
+
