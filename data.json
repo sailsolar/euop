@@ -1,0 +1,24 @@
+{
+  "bs": {
+    "strike": 100,
+    "asset_price": 100,
+    "volatility": 0.01,
+    "riskfree_interest_rate": 0.012,
+    "time_expiration": 10
+  },
+  "numerical_method": {
+    "strike": 100,
+    "asset_price": 100,
+    "volatility": 0.01,
+    "riskfree_interest_rate": 0.012,
+    "time_expiration": 1
+  },
+  "neural_network": {
+    "model_path": "/home/ds/Documents/mverse/euop/nn_artifacts/eubopa_model.h5",
+    "strike": 100,
+    "asset_price": 100,
+    "volatility": 0.01,
+    "riskfree_interest_rate": 0.012,
+    "time_expiration": 1
+  }
+}

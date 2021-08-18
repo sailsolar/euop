@@ -127,3 +127,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# PyCharm
+.idea/
+
+# Custom File Extensions
+*.csv
+*.ipynb
+scratch.py
