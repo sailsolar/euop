@@ -1,6 +1,8 @@
 # EUBOPA
 European Basket Option Pricing Approaches
 
+##Table of Contents
+
 - [EUBOPA](#eubopa)
   * [Scope](#scope)
   * [Objective](#objective)
@@ -15,6 +17,7 @@ European Basket Option Pricing Approaches
   * [2.  Data set](#2--data-set)
     + [2.1. Data set Description](#21-data-set-description)
   * [3. Assumptions attached to this project](#3-assumptions-attached-to-this-project)
+- [GOAL 1](#goal-1)
   * [4. ANN Model](#4-ann-model)
     + [4.1. ANN Architecture](#41-ann-architecture)
     + [4.2. Input Features](#42-input-features)
@@ -28,7 +31,11 @@ European Basket Option Pricing Approaches
       - [2. Neural Network Pricing](#2-neural-network-pricing)
       - [3. Monte-Carlo Pricing](#3-monte-carlo-pricing)
   * [EDA](#eda)
-- [Future Direction & Improvements](#future-direction---improvements)
+- [Goal 2](#goal-2)
+  * [Comparison between Neural Network and Monte Carlo Numerical Method](#comparison-between-neural-network-and-monte-carlo-numerical-method)
+- [Goal 3](#goal-3)
+  * [Comparison of Analytical Method (Black-Scholes Pricing) vs Neural Network bs Monte Carlo Numerical Method](#comparison-of-analytical-method--black-scholes-pricing--vs-neural-network-bs-monte-carlo-numerical-method)
+  * [Future Direction & Improvements](#future-direction---improvements)
   * [References](#references)
 
 [comment]: <> (<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>)
@@ -256,7 +263,7 @@ meaningful pricing. This indicates a problem with either the dataset or the vola
 
 
 # Goal 3
-##Comparison of Analytical Method (Black-Scholes Pricing) vs Neural Network bs Monte Carlo Numerical Method
+## Comparison of Analytical Method (Black-Scholes Pricing) vs Neural Network bs Monte Carlo Numerical Method
 While looking at the results, the Black-Scholes pricing seems to be the most reasonable and correct against the NN, and
 Monte-Carlo method. Part of this behavior is due to the fact that Black-Scholes pricing is used as the target variable 
 in the training of the Neural network giving it an edge of being the ground truth. Dataset, however, needs to be discussed with a domain expert.
