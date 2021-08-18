@@ -31,7 +31,7 @@ class EuropeanCall:
             z2 = b * k * z2
             return float(z1 - z2)
         except Exception as e:
-            print(f"Caught exception while evaluating call price: {e}")
+            print(f"Exception occurred while evaluating call price: {e}")
 
     def __init__(self, asset_price, strike_price, volatility, time_to_expiry, riskfree_factor):
         """Calculate the Black-Scholes price of an European Basket Call Option
@@ -50,8 +50,8 @@ class EuropeanCall:
             risk-free interest rate
         """
         self.s = asset_price
-        self.v = volatility
         self.k = strike_price
+        self.v = volatility
         self.t_exp = time_to_expiry
         self.rf = riskfree_factor
 
