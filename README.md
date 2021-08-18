@@ -61,10 +61,24 @@ There was no metadata attached to this dataset. I found following information wh
 
          Entity                              |                    Description
          ------------------------------------|-----------------------------------------------------------------
-         Total observations in the data      | 62795
-         Total trade symbols in the data     | 2346
+         Total observations in the data      |                      62795
+         Total trade symbols in the data     |                      2346
          Highest observation in all the data | [SPY (SPDR S&P 500 Trust ETF)](https://finance.yahoo.com/quote/SPY/)
-         Total Count of SPY observations     | 4455
+         Total Count of SPY observations     |                      4455
+
+As being one of the most frequent stock in the given data, I chose to work with SPY symbol. Furthermore, I selected only
+the call options for the SPY dataset.
+
+## 3. Assumptions attached to this project
+
+1. The first assumption undertaken is that the data of SPY company is representing a weighted average of multiple assets
+making it a basket option.
+2. The option will only be exercised on the expiration date hence making it classic European option.
+3. Volatility of this option is calculated by the following formula.
+
+![volatility](assets/volatility.png)
+
+5. 
 
 #### Basic Structure of ANNs
 ANNs are composed of multiple nodes, which imitate biological neurons of human brain. The neurons are connected by links and they interact with each other. The nodes can take input data and perform simple operations on the data. The result of these operations is passed to other neurons. The output at each node is called its activation or node value.Each link is associated with weight.
