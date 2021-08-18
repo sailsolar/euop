@@ -59,12 +59,12 @@ found a raw data of stock options on [Kaggle](https://www.kaggle.com/bendgame/op
 
 There was no metadata attached to this dataset. I found following information while exploring this data.
 
-Entity | Description
-    :---:    |    :---:
-Total observations in the data | 62795
-Total trade symbols in the data | 2346
+Entity                              |  Description
+         :---:                      |    :---:
+Total observations in the data      | 62795
+Total trade symbols in the data     | 2346
 Highest observation in all the data | [SPY (SPDR S&P 500 Trust ETF)](https://finance.yahoo.com/quote/SPY/)
-Total Count of SPY observations | 4455
+Total Count of SPY observations     | 4455
 
 #### Basic Structure of ANNs
 ANNs are composed of multiple nodes, which imitate biological neurons of human brain. The neurons are connected by links and they interact with each other. The nodes can take input data and perform simple operations on the data. The result of these operations is passed to other neurons. The output at each node is called its activation or node value.Each link is associated with weight.
