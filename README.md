@@ -99,7 +99,7 @@ found a raw data of stock options on [Kaggle](https://www.kaggle.com/bendgame/op
 
 There was no metadata attached to this dataset. I found following information while exploring this data.
 
-         Entity                              |                    Description
+Entity                              |                    Description
          ------------------------------------|-----------------------------------------------------------------
          Total observations in the data      |                      62795
          Total trade symbols in the data     |                      2346
@@ -145,8 +145,11 @@ as follows.
 
 ![model summary](assets/model_summary.png)
 
+![architecture](assets/nn.svg)   | ![model](assets/mdl.png)
+------------------------------   | ------------------------
 
-![architecture](assets/nn.svg)  
+
+[comment]: <> (![architecture]&#40;assets/nn.svg&#41;  )
 
 
 ### 4.2. Input Features
