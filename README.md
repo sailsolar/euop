@@ -198,7 +198,7 @@ some here.
 This code should work with``` Python >= 3.6```
 
 ### Environment Setup:
-  ```pip3 install requirements.txt```
+  ```pip3 install -r requirements.txt```
 
 ### Usage:
  The main functionality of the three requirements mentioned in the assessment is implemented in ```runner.py``` file.
